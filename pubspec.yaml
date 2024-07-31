@@ -1,0 +1,35 @@
+name: sqlite_flutter
+description: "A new Flutter project."
+
+# Prevent accidental publishing to pub.dev
+publish_to: 'none'
+
+# App version and build number
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Cupertino Icons for iOS style icons
+  cupertino_icons: ^1.0.6
+
+  # For working with SQLite
+  sqflite: 2.3.2
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Recommended linting tool
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/assets/login.png
