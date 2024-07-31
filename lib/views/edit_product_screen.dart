@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/product.dart';
-import '../service/productservice.dart';
+import '../viewmodel/productservice.dart';
 
 class EditProductForm extends StatefulWidget {
   String productId;

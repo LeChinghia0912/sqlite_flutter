@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sqlite_flutter/Authtentication/signup.dart';
 import 'package:sqflite/sqflite.dart';
-import '../screen/product_screen.dart';
-import '../service/authservice.dart';
+
+import '../viewmodel/authservice.dart';
+import '../views/product_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -81,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                     padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.deepPurple.withOpacity(0.1),
@@ -108,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Password
                   Container(
                     padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.deepPurple.withOpacity(0.1),

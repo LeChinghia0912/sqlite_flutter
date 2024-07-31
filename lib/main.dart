@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sqlite_flutter/Authtentication/login.dart';
 import 'package:sqlite_flutter/Authtentication/signup.dart';
-import 'package:sqlite_flutter/screen/product_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

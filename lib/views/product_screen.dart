@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-
 import '../model/product.dart';
-import '../service/productservice.dart';
+import '../viewmodel/productservice.dart';
 import 'add_product_screen.dart';
 import 'detail_product_screen.dart';
 import 'edit_product_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
 
   @override
   State<StatefulWidget> createState() => _HomeScreenState();

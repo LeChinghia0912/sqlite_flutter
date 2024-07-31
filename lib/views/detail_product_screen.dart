@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../model/product.dart';
-import '../service/productservice.dart';
+import '../viewmodel/productservice.dart';
 
 class DetailProduct extends StatefulWidget {
   String id;

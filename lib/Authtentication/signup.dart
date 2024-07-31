@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sqlite_flutter/Authtentication/login.dart';
 import 'package:sqflite/sqflite.dart';
 import '../model/auth.dart';
-import '../service/authservice.dart';
+import '../viewmodel/authservice.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -85,13 +85,14 @@ class _SignUpState extends State<SignUp> {
                   const ListTile(
                     title: Text(
                       "Register New Account",
-                      style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                     padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.deepPurple.withOpacity(0.2),
@@ -120,7 +121,7 @@ class _SignUpState extends State<SignUp> {
                   // Password
                   Container(
                     padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.deepPurple.withOpacity(0.2),
@@ -157,11 +158,13 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
 
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   // Confirm Password
                   Container(
                     padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.deepPurple.withOpacity(0.2),
@@ -219,9 +222,7 @@ class _SignUpState extends State<SignUp> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const LoginScreen()
-                                )
-                            );
+                                    builder: (context) => const LoginScreen()));
                           },
                           child: const Text('Login'))
                     ],

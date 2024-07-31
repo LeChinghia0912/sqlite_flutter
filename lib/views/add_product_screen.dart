@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/product.dart';
-import '../service/productservice.dart';
+import '../viewmodel/productservice.dart';
 
 class AddProductForm extends StatefulWidget {
   const AddProductForm({super.key});
@@ -9,16 +9,20 @@ class AddProductForm extends StatefulWidget {
   @override
   _AddProductFormState createState() => _AddProductFormState();
 }
+
 class _AddProductFormState extends State<AddProductForm> {
   late ProductService service;
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _productIdController = TextEditingController();
   final TextEditingController _productNameController = TextEditingController();
   final TextEditingController _productPriceController = TextEditingController();
-  final TextEditingController _productQuantityController = TextEditingController();
-  connectDatabase() async{
-    service=ProductService(await getDatabase());
+  final TextEditingController _productQuantityController =
+      TextEditingController();
+
+  connectDatabase() async {
+    service = ProductService(await getDatabase());
   }
+
   @override
   void initState() {
     connectDatabase();
@@ -95,12 +99,14 @@ class _AddProductFormState extends State<AddProductForm> {
                     if (_formKey.currentState!.validate()) {
                       // Process the data, for example, add the product to a list
                       // or send it to an API
-                      String productId=_productIdController.text;
+                      String productId = _productIdController.text;
                       String productName = _productNameController.text;
-                      int price =int.parse(_productPriceController.text);
-                      int quantity =int.parse(_productQuantityController.text);
-                      service.insert(Product(productId, productName, price, quantity));
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Thêm thành công!')));
+                      int price = int.parse(_productPriceController.text);
+                      int quantity = int.parse(_productQuantityController.text);
+                      service.insert(
+                          Product(productId, productName, price, quantity));
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('Thêm thành công!')));
                       _productIdController.clear();
                       _productNameController.clear();
                       _productPriceController.clear();
